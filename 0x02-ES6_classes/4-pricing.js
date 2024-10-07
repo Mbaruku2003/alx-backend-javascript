@@ -38,7 +38,7 @@ export default class Pricing {
     if (typeof amount !== 'number') {
       throw new TypeError('amount must be a number');
     } else {
-      this.amount = amount
+      this.amount = amount;
     }
     if (typeof conversionRate !== 'number') {
       throw new TypeError('amount must be a number');

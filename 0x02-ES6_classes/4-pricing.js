@@ -43,6 +43,6 @@ export default class Pricing {
     if (typeof conversionRate !== 'number') {
       throw new TypeError('amount must be a number');
     }
-    return this.amount * this.conversionPrice;
+    return this.amount * this.conversionRate;
   }
 }

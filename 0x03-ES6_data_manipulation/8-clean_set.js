@@ -1,4 +1,4 @@
-const CleanSet = (Set, startString) => {
+const CleanSet = (set, startString) => {
   const strings = [];
   if (startString === '' || typeof startString !== 'string') return '';
   set.forEach(s) => {

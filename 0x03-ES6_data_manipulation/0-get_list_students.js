@@ -7,7 +7,7 @@ export default function getListStudents() {
   const obj2 = {
     id: 2,
     firstName: 'James',
-    location: 'Guillaume',
+    location: 'Columbia',
   };
   const obj3 = {
     id: 5,

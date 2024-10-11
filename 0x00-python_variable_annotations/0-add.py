@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Takes a float a and float b and returns their sum as float.
 """

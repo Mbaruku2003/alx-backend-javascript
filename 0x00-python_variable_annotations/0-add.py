@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Takes a float a and float b and returns their sum as float.
-"""
+"""Takes a float a and float b and returns their sum as float."""
 import typing
 
 

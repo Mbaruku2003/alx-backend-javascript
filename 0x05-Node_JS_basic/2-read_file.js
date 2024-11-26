@@ -8,10 +8,15 @@ const countStudents = (path) => {
       throw new Error('Cannot load the database');
     }
 
-    const [header, ...rows] = lines;
+    const rows = lines.slice(1);
     const students = rows.map((row) => {
       const [firstname, lastname, age, field] = row.split(',');
-      return {firstname, lastname, age, field};
+      return {
+        firstname,
+        lastname,
+        age,
+        field,
+      };
     });
     const fields = {};
     for (const student of students) {
@@ -27,5 +32,5 @@ const countStudents = (path) => {
   } catch (err) {
     throw new Error('Cannot load the database');
   }
-}
+};
 module.exports = countStudents;

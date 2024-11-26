@@ -20,7 +20,7 @@ const app = http.createServer((req, res) => {
         res.end();
       })
       .catch((error) => {
-        res.end(error.message);
+        res.end(`Cannot load the database\n${error.message}`);
       });
   } else {
     res.statusCode = 404;

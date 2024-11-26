@@ -21,17 +21,13 @@ const countStudents = (thepath) => {
   const studentPropNames = dbFieldNames.slice(0, dbFieldNames.length - 1);
   for (const line of fileLines.slice(1)) {
     const studentRecord = line.split(',');
-    if (studentRecord.length !== dbFieldNames.length) {
-      continue;
-    }
-
     const studentPropValues = studentRecord.slice(0, studentRecord.length - 1);
     const field = studentRecord[studentRecord.length - 1];
     if (!Object.keys(studentGroups).includes(field)) {
       studentGroups[field] = [];
     }
     const studentEntries = studentPropNames.map((propName, idx) => [
-      propName.toLowerCase(), studentPropValues[idx], ]);
+      propName.toLowerCase(), studentPropValues[idx]]);
     studentGroups[field].push(Object.fromEntries(studentEntries));
   }
   const totalStudents = Object.values(studentGroups).reduce(

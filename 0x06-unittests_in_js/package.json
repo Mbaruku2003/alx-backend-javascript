@@ -1,0 +1,14 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "ll deal wit javascript testing using mocha, chai and sinon",
+  "main": "0-calcul.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.8.2"
+  }
+}

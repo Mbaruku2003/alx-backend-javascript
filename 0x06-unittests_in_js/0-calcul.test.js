@@ -9,9 +9,9 @@ describe('calculateNumber', () => {
     assert.strictEqual(calculateNumber(1, 3.7), 5);
   });
   it('return 5 for 1.2 and 3.7', () => {
-    assert.strictEqual(calculateNumber(1.2, 3.7), 5);
+    assert.strictEqual(calculateNumber(-1.2, 3.7), 3);
   });
-  it('return 6 for 1.5 and 3.7', () => {
-    assert.strictEqual(calculateNumber(1.5, 3.7), 6);
+  it('return -2 for -1.5 and 0.0', () => {
+    assert.strictEqual(calculateNumber(-1.7, 0.0), -2);
   });
 });

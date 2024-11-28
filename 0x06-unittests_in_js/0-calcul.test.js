@@ -14,4 +14,10 @@ describe('calculateNumber', () => {
   it('return -2 for -1.5 and 0.0', () => {
     assert.strictEqual(calculateNumber(-1.7, 0.0), -2);
   });
+  it('should return 0 for 0.4 and 0.4', () => {
+    assert.strictEqual(calculateNumber(0.4, 0.4), 0);
+  });
+  it('should return 1 for 0.6 and 0.4', () => {
+    assert.strictEqual(calculateNumber(0.6, 0.4), 1);
+  });
 });

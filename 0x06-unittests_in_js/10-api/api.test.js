@@ -47,6 +47,12 @@ describe('API intergration tests', () => {
   describe('Available payment endpoints', () => {
     it('should return status code 200', (done) => {
       request.get(`${BASE_URL}/available_payments`, (error,response, body) => {
+        expect(response.statusCode).to.equal(200);
+        done();
+      });
+    });
+    it('should return the correct payment methods', (done) => {
+      request.get(`${BASE_URL}/available_payments`, (error, response, body) => {
         const expectedResponse = {
           payment_methods: {
             credit_cards: true,
@@ -74,8 +80,8 @@ describe('API intergration tests', () => {
     it('should return status code 400 when user name is provided', (done) => {
       const options = {
         url: `${BASE_URL}/login`,
-	      json: true,
-	      body: {},
+        json: true,
+        body: {},
       };
       request.post(options, (error, response, body) => {
         expect(response.statusCode).to.equal(400);

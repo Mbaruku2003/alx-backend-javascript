@@ -58,4 +58,29 @@ describe('API intergration tests', () => {
       });
     });
   });
+  describe('Login endpoint', () => {
+    it('should return status code 200', (done) => {
+      const options = {
+	      url: `${BASE_URL}/login`,
+	      json: true,
+	      body: { userName: 'Betty' },
+      };
+      request.post(options, (error, response, body) => {
+        expect(response.statusCode).to.equal(200);
+        expect(body).to.equal('Welcome Betty');
+        done();
+      });
+    });
+    it('should return status code 400 when user name is provided', (done) => {
+      const options = {
+        url: `${BASE_URL}/login`,
+	      json: true,
+	      body: {},
+      };
+      request.post(options, (error, response, body) => {
+        expect(response.statusCode).to.equal(400);
+        done();
+      });
+    });
+  });
 });

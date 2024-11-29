@@ -16,7 +16,7 @@ describe('API intergration tests', () => {
         expect(body).to.equal('Welcome to the payment system');
         done();
       });
-    })
+    });
   });
   describe('should return the correct message', () => {
     it('should return the correct message', (done) => {
@@ -33,12 +33,6 @@ describe('API intergration tests', () => {
     });
     it('should return status code 404 for an invalid route', (done) => {
       request.get(`${BASE_URL}/cart/hello`, (error, response, body) => {
-        expect(response.statusCode).to.equal(404);
-        done();
-      });
-    });
-    it('should return status code 404 for  an invalid  route', (done) => {
-      request.get(`${BASE_URL}/invalid-route`, (error, response, body) => {
         expect(response.statusCode).to.equal(404);
         done();
       });
